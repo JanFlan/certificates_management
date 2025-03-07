@@ -1,8 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { CertificateModule } from './certificate/certificate.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { MulterModule } from '@nestjs/platform-express';
 
 @Module({
   imports: [
@@ -17,6 +19,8 @@ import { AppService } from './app.service';
       autoLoadEntities: true,
       synchronize: true,
     }),
+    MulterModule.register({ dest: './uploads' }),
+    CertificateModule,
   ],
   controllers: [AppController],
   providers: [AppService],
