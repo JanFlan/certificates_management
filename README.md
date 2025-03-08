@@ -14,7 +14,7 @@ This is a full-stack certificate generation project built using:
   - Responsive certificate view
   - Swagger API documentation
   - Full data validation
-  - Unit tests for both frontend and backend
+  - Unit tests for backend
 
 ## Installation & Setup
 
